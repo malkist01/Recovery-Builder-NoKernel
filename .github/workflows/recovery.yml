@@ -12,7 +12,6 @@ env:
   TZ: Asia/Jakarta
 
 jobs:
-jobs:
   build:
     name: Build OFR by ${{ github.actor }}
     runs-on: ubuntu-latest
@@ -21,18 +20,12 @@ jobs:
     permissions:
       contents: write
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+       - name: Checkout
+         uses: actions/checkout@v4
               
-    - name: Clean-up
-      uses: rokibhasansagar/slimhub_actions@main
-
-    - name: Swap Space
-      uses: pierotofy/set-swap-space@master
-      with:
-        swap-size-gb: 24
-         
-
+       - name: Clean-up
+         uses: rokibhasansagar/slimhub_actions@main
+        
        - name: Initializing environment
          run: |
             sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d
