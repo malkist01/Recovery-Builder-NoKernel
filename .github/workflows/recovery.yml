@@ -20,11 +20,11 @@ env:
   DT_LINK: https://github.com/ElytrA8/recovery_rosy
   DT_PATH: device/xiaomi/rosy
   TARGET: recoveryimage
-  TZ: Asia/Kolkata
+  TZ: Asia/Jakarta
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
 
     steps:
        - name: Checkout
